@@ -1,0 +1,45 @@
+@use '../../variables' as vars;
+
+.footer {
+    min-height: 141px;
+    background: vars.$deep-blue;
+}
+
+.notification-form {
+    min-height: 41px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: vars.$white;
+    border-radius: 40px;
+    
+    &__input {
+        height: 21px;
+        min-width: 202px;
+        background:none;
+        margin: 0 17px 0 20px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button {
+        width: 33px;
+        height: 33px;
+        background: vars.$red;
+        border-radius: 50%;
+        border: none;
+        margin: 4px;
+
+        &:active {
+            background: #e7494c;
+        }
+
+        &__arrow {
+            height: 15.35px;
+            width: 15.35px;
+        }
+    }
+}

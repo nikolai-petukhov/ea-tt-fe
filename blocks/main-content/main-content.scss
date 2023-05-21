@@ -1,0 +1,118 @@
+@use '../../variables' as vars;
+
+.main {
+    margin: 66px 20px 86px 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__content {
+        
+        &__heading {
+            font-size: 36px;
+            font-weight: 700;
+            color: vars.$deep-blue;
+            opacity: 0.39;
+            text-align: center;
+            line-height: 104%;
+            text-transform: uppercase;
+        }
+
+        &__text {
+            margin: 16px 16px 0 16px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+        }
+
+        &__countdown {
+            margin: 40px 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &__container {
+                display: flex;
+                flex-direction: column;
+                column-gap: 6px;
+                min-height: 82px;
+                min-width: 64px;
+                
+                &__number {
+                    height: 44px;
+                    font-weight: 600;
+                    font-size: 36px;
+                    line-height: 100%;
+                    color: vars.$deep-blue;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                &__wave {
+                    height: 44px;
+                    background: no-repeat url('../../assets/red-wave.svg');
+                    background-position: 0px -3px;
+                    color: vars.$white;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding-top: 10px;
+                }
+            }
+
+            &__devider {
+                font-weight: 600;
+                font-size: 36px;
+                color: vars.$deep-blue;        
+                width: 10px;
+                line-height: 100%;
+            }
+        }
+    }
+
+    &__checkout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__paragraph {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            margin: 0 0 15px 20px;
+        }
+
+        &__button, 
+        &__button:visited {
+            width: 240px;
+            height: 60px;
+            background: vars.$dark-blue;
+            border-radius: 40px;
+            border: none;
+            font-weight: 400;
+            font-size: 18px;
+            color: vars.$white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 0 28px;
+            text-decoration: none;
+
+            &:active {
+                opacity: 0.9;
+                color: vars.$white;
+            }
+
+            &__arrow {
+                height: 20;
+            }
+        }
+
+    }
+}

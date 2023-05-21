@@ -30,12 +30,118 @@
   border: none;
   margin: 4px;
 }
-.notification-form__button:active {
-  background: #e7494c;
+.notification-form__button:active, .notification-form__button:hover {
+  opacity: 0.9;
 }
 .notification-form__button__arrow {
   height: 15.35px;
   width: 15.35px;
+}
+
+.logo {
+  background: url("../../assets/logo.svg");
+  height: 40px;
+  width: 128px;
+  margin: 80px 0 0 0;
+}
+
+.main {
+  margin: 66px 20px 86px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.main__content__heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #162C4E;
+  opacity: 0.39;
+  text-align: center;
+  line-height: 104%;
+  text-transform: uppercase;
+}
+.main__content__text {
+  margin: 16px 16px 0 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+}
+.main__content__countdown {
+  margin: 40px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main__content__countdown__container {
+  display: flex;
+  flex-direction: column;
+  column-gap: 6px;
+  min-height: 82px;
+  min-width: 64px;
+}
+.main__content__countdown__container__number {
+  height: 44px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  color: #162C4E;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main__content__countdown__container__wave {
+  height: 44px;
+  background: no-repeat url("../../assets/red-wave.svg");
+  background-position: 0px -3px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+}
+.main__content__countdown__devider {
+  font-weight: 600;
+  font-size: 36px;
+  color: #162C4E;
+  width: 10px;
+  line-height: 100%;
+}
+.main__checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__checkout__paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  margin: 0 0 15px 20px;
+}
+.main__checkout__button, .main__checkout__button:visited {
+  width: 240px;
+  height: 60px;
+  background: #1D4169;
+  border-radius: 40px;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 28px;
+  text-decoration: none;
+}
+.main__checkout__button:active, .main__checkout__button:visited:active {
+  opacity: 0.9;
+  color: #FFFFFF;
+}
+.main__checkout__button__arrow, .main__checkout__button:visited__arrow {
+  height: 20;
 }
 
 * {
@@ -47,18 +153,45 @@
 html, body {
   height: 100%;
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 .wrapper {
   min-height: 100%;
+  width: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.clouds {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.clouds__left {
+  top: -27px;
+  position: absolute;
+  background: no-repeat url("./assets/cloud-left.svg") -14px/188px;
+  height: 172px;
+  width: 184px;
+}
+.clouds__right {
+  position: absolute;
+  right: -29px;
+  top: -16px;
+  background: no-repeat url("./assets/cloud-right.svg") -24px/227px;
+  height: 284px;
+  width: 178px;
+  transform: rotate(353deg);
 }
 
 /*# sourceMappingURL=styles.css.map */

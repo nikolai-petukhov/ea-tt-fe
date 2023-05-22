@@ -56,6 +56,8 @@
         min-height: 141px;
         background: vars.$deep-blue;
         width: 100vw;
+        display: flex;
+        flex-direction: column;
     }
 
     .notification-form {
@@ -105,6 +107,8 @@
         min-height: 160px;
         background: vars.$deep-blue;
         width: 100vw;
+        display: flex;
+        flex-direction: column;
     }
 
     .notification-form {

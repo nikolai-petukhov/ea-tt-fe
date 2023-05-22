@@ -47,6 +47,8 @@
     min-height: 141px;
     background: #162C4E;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
   }
   .notification-form {
     min-height: 41px;
@@ -87,6 +89,8 @@
     min-height: 160px;
     background: #162C4E;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
   }
   .notification-form {
     min-height: 41px;

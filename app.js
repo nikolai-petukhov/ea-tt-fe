@@ -1,4 +1,4 @@
-const countDownDate = new Date("May 31, 2023 00:00:00").getTime()
+const countDownDate = new Date('May 31, 2023 00:00:00').getTime()
 
 const days = document.getElementById('days')
 const hours = document.getElementById('hours')
@@ -6,57 +6,95 @@ const minutes = document.getElementById('minutes')
 const seconds = document.getElementById('seconds')
 
 setInterval(() => {
-    const now = new Date().getTime()
-    const distance = countDownDate - now
+  const now = new Date().getTime()
+  const distance = countDownDate - now
 
-    days.innerText = Math.floor(distance / (1000 * 60 * 60 * 24))
-    hours.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    minutes.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-    seconds.innerText = Math.floor((distance % (1000 * 60)) / 1000)
+  days.innerText = Math.floor(distance / (1000 * 60 * 60 * 24))
+  hours.innerText = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  )
+  minutes.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+  seconds.innerText = Math.floor((distance % (1000 * 60)) / 1000)
 }, 1000)
 
-
 const showModalWindow = (heading, message) => {
-    const modalWindow = document.getElementById('modalWindow')
-    const modalHeading = document.getElementById('modalHeading')
-    const modalMessage = document.getElementById('modalMessage')
+  const modalWindow = document.getElementById('modalWindow')
+  const modalHeading = document.getElementById('modalHeading')
+  const modalMessage = document.getElementById('modalMessage')
 
+  modalHeading.innerText = heading
+  modalMessage.innerText = message
+  modalWindow.style.display = 'flex'
 
-    modalHeading.innerText = heading
-    modalMessage.innerText = message
-    modalWindow.style.display = 'flex'
+  const f = () => {
+    modalWindow.style.display = 'none'
+  }
+
+  const closeButtons = document.getElementsByClassName('clsBtn')
+  closeButtons[0].addEventListener('click', f)
+  closeButtons[1].addEventListener('click', f)
 }
-
 
 const emailInput = document.getElementById('email')
 const validationMessage = document.getElementById('validationMessage')
-const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
+const EMAIL_REGEXP =
+  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
 
 const validateEmail = (value) => EMAIL_REGEXP.test(value)
 
 const onEmailInput = () => {
-    if (!validateEmail(emailInput.value)) {
-        validationMessage.innerText = 'Please, enter a valid email'
-        validationMessage.style.color = 'red'
-    } else {
-        validationMessage.innerText = ''
-    }
+  if (!validateEmail(emailInput.value)) {
+    validationMessage.innerText = 'Please, enter a valid email'
+    validationMessage.style.color = 'red'
+  } else {
+    validationMessage.innerText = ''
+  }
 }
 emailInput.addEventListener('input', onEmailInput)
 
-
 const notificationForm = document.getElementById('notificationForm')
 
-const sendData = () => {
-    showModalWindow('SUCCESS!', 'You have successfully subscribed to the email newsletter')
+const sendData = (email) => {
+  const xhr = new XMLHttpRequest()
+  const url = 'your_server_url'
+
+  const data = {
+    email: email,
+  }
+
+  const jsonData = JSON.stringify(data)
+
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log('Email sent successfully!')
+        showModalWindow(
+          'SUCCESS!',
+          'You have successfully subscribed to the email newsletter'
+        )
+      } else {
+        console.error('Error: ' + xhr.status)
+        showModalWindow('ERROR!', 'Something has going wrong')
+      }
+    }
+  }
+
+  try {
+    xhr.open('POST', url, true)
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.send(jsonData)
+  } catch (error) {
+    console.error('An error occurred while sending the email: ' + error)
+    showModalWindow('ERROR!', 'Something has going wrong')
+  }
 }
 
 const formSubmit = (e) => {
-    e.preventDefault()
-    if (validateEmail(emailInput.value)) {
-        emailInput.value = ''
-        sendData()
-    }
+  e.preventDefault()
+  if (validateEmail(emailInput.value)) {
+    emailInput.value = ''
+    sendData(emailInput.value)
+  }
 }
 
 notificationForm.addEventListener('submit', formSubmit)

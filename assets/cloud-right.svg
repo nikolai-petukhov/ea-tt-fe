@@ -1,9 +1,9 @@
-<svg width="271" height="327" viewBox="0 0 271 327" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="701" height="833" viewBox="0 0 701 833" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_i_1_29)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M692.596 68.3349C731.063 -32.9233 618.057 -10.1912 601.095 -68.0588C580.49 -138.353 729.002 -462.166 637.823 -501.457C473.409 -538.128 425.523 -317.399 350.068 -308.983C276.918 -300.824 156.67 -280.547 93.8751 -242.151C33.7688 -205.398 -49.0901 -92.6886 39.779 0.3896C108.113 68.3963 152.69 47.4384 173.389 101.341C195.307 158.416 198.952 225.298 245.285 265.188C295.498 308.417 365.735 336.769 430.477 322.676C493.491 308.959 522.898 239.593 569.18 194.684C612.493 152.657 679.791 127.312 692.596 68.3349Z" fill="#162C4E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M692.596 574.335C731.063 473.077 618.057 495.809 601.095 437.941C580.489 367.647 729.002 43.8338 637.823 4.5427C473.408 -32.1282 425.522 188.601 350.068 197.017C276.918 205.176 156.67 225.453 93.875 263.849C33.7686 300.602 -49.0902 413.311 39.7789 506.39C108.113 574.396 152.689 553.438 173.389 607.341C195.307 664.416 198.952 731.298 245.285 771.188C295.498 814.417 365.735 842.769 430.477 828.676C493.491 814.959 522.898 745.593 569.18 700.684C612.492 658.657 679.791 633.312 692.596 574.335Z" fill="#162C4E"/>
 </g>
 <defs>
-<filter id="filter0_i_1_29" x="0.838177" y="-505.564" width="699.692" height="835.887" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_i_1_29" x="0.838043" y="0.435547" width="699.692" height="835.887" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>

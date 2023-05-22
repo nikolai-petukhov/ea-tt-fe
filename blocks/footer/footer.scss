@@ -1,45 +1,147 @@
 @use '../../variables' as vars;
 
-.footer {
-    min-height: 141px;
-    background: vars.$deep-blue;
-}
-
-.notification-form {
-    min-height: 41px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: vars.$white;
-    border-radius: 40px;
-    
-    &__input {
-        height: 21px;
-        min-width: 202px;
-        background:none;
-        margin: 0 17px 0 20px;
-        border: none;
-
-        &:focus {
-            outline: none;
-        }
+@media screen and (min-width: 1241px) {
+    .footer {
+        height: 192px;
+        background: vars.$deep-blue;
+        width: 100vw;
     }
 
-    &__button {
-        width: 33px;
-        height: 33px;
-        background: vars.$red;
-        border-radius: 50%;
-        border: none;
-        margin: 4px;
+    .notification-form {
+        min-height: 59px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: vars.$white;
+        border-radius: 40px;
 
-        &:active, &:hover {
-            opacity: 0.9;
+        &__input {
+            height: 27px;
+            font-size: 18px;
+            min-width: 340px;
+            background: none;
+            margin: 0 17px 0 30px;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
         }
 
-        &__arrow {
-            height: 15.35px;
-            width: 15.35px;
+        &__button {
+            width: 43px;
+            height: 43px;
+            background: vars.$red;
+            border-radius: 50%;
+            border: none;
+            margin: 4px;
+
+            &:active,
+            &:hover {
+                opacity: 0.9;
+            }
+
+            &__arrow {
+                height: 15.35px;
+                width: 15.35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        min-height: 141px;
+        background: vars.$deep-blue;
+        width: 100vw;
+    }
+
+    .notification-form {
+        min-height: 41px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: vars.$white;
+        border-radius: 40px;
+
+        &__input {
+            height: 21px;
+            min-width: 202px;
+            background: none;
+            margin: 0 17px 0 20px;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__button {
+            width: 33px;
+            height: 33px;
+            background: vars.$red;
+            border-radius: 50%;
+            border: none;
+            margin: 4px;
+
+            &:active,
+            &:hover {
+                opacity: 0.9;
+            }
+
+            &__arrow {
+                height: 15.35px;
+                width: 15.35px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1240px) {
+    .footer {
+        min-height: 160px;
+        background: vars.$deep-blue;
+        width: 100vw;
+    }
+
+    .notification-form {
+        min-height: 41px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: vars.$white;
+        border-radius: 40px;
+
+        &__input {
+            height: 21px;
+            min-width: 280px;
+            background: none;
+            margin: 0 17px 0 20px;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__button {
+            width: 33px;
+            height: 33px;
+            background: vars.$red;
+            border-radius: 50%;
+            border: none;
+            margin: 4px;
+
+            &:active,
+            &:hover {
+                opacity: 0.9;
+            }
+
+            &__arrow {
+                height: 15.35px;
+                width: 15.35px;
+            }
         }
     }
 }

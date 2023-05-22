@@ -1,118 +1,386 @@
 @use '../../variables' as vars;
 
-.main {
-    margin: 66px 20px 86px 20px;
-    display: flex;
-    flex-direction: column;
-
-    &__content {
-        
-        &__heading {
-            font-size: 36px;
-            font-weight: 700;
-            color: vars.$deep-blue;
-            opacity: 0.39;
-            text-align: center;
-            line-height: 104%;
-            text-transform: uppercase;
-        }
-
-        &__text {
-            margin: 16px 16px 0 16px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 150%;
-            text-align: center;
-        }
-
-        &__countdown {
-            margin: 40px 5px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            &__container {
-                display: flex;
-                flex-direction: column;
-                column-gap: 6px;
-                min-height: 82px;
-                min-width: 64px;
-                
-                &__number {
-                    height: 44px;
-                    font-weight: 600;
-                    font-size: 36px;
-                    line-height: 100%;
-                    color: vars.$deep-blue;
-
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                }
-
-                &__wave {
-                    height: 44px;
-                    background: no-repeat url('../../assets/red-wave.svg');
-                    background-position: 0px -3px;
-                    color: vars.$white;
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    padding-top: 10px;
-                }
-            }
-
-            &__devider {
-                font-weight: 600;
-                font-size: 36px;
-                color: vars.$deep-blue;        
-                width: 10px;
-                line-height: 100%;
-            }
-        }
-    }
-
-    &__checkout {
+@media screen and (min-width: 1241px) {
+    .main {
+        margin: 96px auto 66px auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        row-gap: 48px;
 
-        &__paragraph {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 100%;
-            margin: 0 0 15px 20px;
+        &__content {
+
+            &__heading {
+                font-size: 72px;
+                font-weight: 700;
+                color: vars.$deep-blue;
+                opacity: 0.39;
+                text-align: center;
+                line-height: 104%;
+                text-transform: uppercase;
+            }
+
+            &__text {
+                width: 423px;
+                margin: 8px 237px 0 237px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                text-align: center;
+            }
+
+            &__countdown {
+                width: 588px;
+                margin: 30px auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &__container {
+                    display: flex;
+                    flex-direction: column;
+                    column-gap: 3px;
+                    min-height: 129px;
+                    min-width: 132px;
+
+                    &__number {
+                        height: 72px;
+                        font-weight: 600;
+                        font-size: 72px;
+                        line-height: 100%;
+                        color: vars.$deep-blue;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+
+                    &__wave {
+                        height: 54px;
+                        width: 132px;
+                        background: no-repeat url('../../assets/red-waveB.svg');
+                        color: vars.$white;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding-top: 20px;
+
+                        &__smLbl {
+                            display: none;
+                        }
+                        &__bigLbl {
+                            display: block;
+                        }
+                    }
+                }
+
+                &__devider {
+                    font-weight: 600;
+                    font-size: 72px;
+                    color: vars.$deep-blue;
+                    width: 10px;
+                    line-height: 100%;
+                }
+            }
         }
 
-        &__button, 
-        &__button:visited {
-            width: 240px;
-            height: 60px;
-            background: vars.$dark-blue;
-            border-radius: 40px;
-            border: none;
-            font-weight: 400;
-            font-size: 18px;
-            color: vars.$white;
+        &__checkout {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 0 20px 0 28px;
-            text-decoration: none;
 
-            &:active {
-                opacity: 0.9;
-                color: vars.$white;
+            &__paragraph {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 100%;
+                margin: 0 0 17px 0px;
             }
 
-            &__arrow {
-                height: 20;
+            &__button,
+            &__button:visited {
+                width: 240px;
+                height: 60px;
+                background: vars.$dark-blue;
+                border-radius: 40px;
+                border: none;
+                font-weight: 400;
+                font-size: 18px;
+                color: vars.$white;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px 0 28px;
+                text-decoration: none;
+
+                &:active {
+                    opacity: 0.9;
+                    color: vars.$white;
+                }
+
+                &__arrow {
+                    height: 20;
+                }
+            }
+
+        }
+    }
+}
+
+//mobile
+@media screen and (max-width: 767px) {
+    .main {
+        margin: 66px 20px;
+        display: flex;
+        flex-direction: column;
+
+        &__content {
+
+            &__heading {
+                font-size: 36px;
+                font-weight: 700;
+                color: vars.$deep-blue;
+                opacity: 0.39;
+                text-align: center;
+                line-height: 104%;
+                text-transform: uppercase;
+            }
+
+            &__text {
+                margin: 16px 16px 0 16px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+            }
+
+            &__countdown {
+                margin: 40px auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 310px;
+
+                &__container {
+                    display: flex;
+                    flex-direction: column;
+                    column-gap: 6px;
+                    min-height: 82px;
+                    min-width: 64px;
+
+                    &__number {
+                        height: 44px;
+                        font-weight: 600;
+                        font-size: 36px;
+                        line-height: 100%;
+                        color: vars.$deep-blue;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+
+                    &__wave {
+                        height: 44px;
+                        background: no-repeat url('../../assets/red-wave.svg');
+                        background-position: 0px -3px;
+                        color: vars.$white;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding-top: 10px;
+                        
+                        &__smLbl {
+                            display: block;
+                        }
+                        &__bigLbl {
+                            display: none;
+                        }
+                    }
+                }
+
+                &__devider {
+                    font-weight: 600;
+                    font-size: 36px;
+                    color: vars.$deep-blue;
+                    width: 10px;
+                    line-height: 100%;
+                }
             }
         }
 
+        &__checkout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__paragraph {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                margin: 0 0 15px 20px;
+            }
+
+            &__button,
+            &__button:visited {
+                width: 240px;
+                height: 60px;
+                background: vars.$dark-blue;
+                border-radius: 40px;
+                border: none;
+                font-weight: 400;
+                font-size: 18px;
+                color: vars.$white;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px 0 28px;
+                text-decoration: none;
+
+                &:active {
+                    opacity: 0.9;
+                    color: vars.$white;
+                }
+
+                &__arrow {
+                    height: 20;
+                }
+            }
+
+        }
+    }
+}
+
+//tablet
+@media screen and (min-width: 768px) and (max-width: 1240px) {
+    .main {
+        margin: 166px 174px 66px 175px;
+        display: flex;
+        flex-direction: column;
+
+        &__content {
+
+            &__heading {
+                font-size: 36px;
+                font-weight: 700;
+                color: vars.$deep-blue;
+                opacity: 0.39;
+                text-align: center;
+                line-height: 104%;
+                text-transform: uppercase;
+            }
+
+            &__text {
+                margin: 20px 60px 0 60px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+            }
+
+            &__countdown {
+                margin: 40px auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 358px;
+
+                &__container {
+                    display: flex;
+                    flex-direction: column;
+                    column-gap: 6px;
+                    min-height: 82px;
+                    min-width: 64px;
+
+                    &__number {
+                        height: 44px;
+                        font-weight: 600;
+                        font-size: 36px;
+                        line-height: 100%;
+                        color: vars.$deep-blue;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+
+                    &__wave {
+                        height: 44px;
+                        background: no-repeat url('../../assets/red-wave.svg');
+                        background-position: 0px -3px;
+                        color: vars.$white;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding-top: 10px;
+                                                
+                        &__smLbl {
+                            display: block;
+                        }
+                        &__bigLbl {
+                            display: none;
+                        }
+                    }
+                }
+
+                &__devider {
+                    font-weight: 600;
+                    font-size: 36px;
+                    color: vars.$deep-blue;
+                    width: 10px;
+                    line-height: 100%;
+                }
+            }
+        }
+
+        &__checkout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__paragraph {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                margin: 0 0 17px 0px;
+            }
+
+            &__button,
+            &__button:visited {
+                width: 240px;
+                height: 60px;
+                background: vars.$dark-blue;
+                border-radius: 40px;
+                border: none;
+                font-weight: 400;
+                font-size: 18px;
+                color: vars.$white;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px 0 28px;
+                text-decoration: none;
+
+                &:active {
+                    opacity: 0.9;
+                    color: vars.$white;
+                }
+
+                &__arrow {
+                    height: 20;
+                }
+            }
+
+        }
     }
 }

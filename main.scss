@@ -16,6 +16,7 @@ html, body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -40,20 +41,62 @@ html, body {
     justify-content: space-between;
 
     &__left {
-        top: -27px;
+        background: no-repeat url(./assets/cloud-left.svg) -378px/846px;
+        top: -556px;
         position: absolute;
-        background: no-repeat url('./assets/cloud-left.svg') -14px/188px;
-        height: 172px;
-        width: 184px;
+        height: 1271px;
+        width: 838px;
     }
 
     &__right {
         position: absolute;
-        right: -29px;
-        top: -16px;
-        background: no-repeat url('./assets/cloud-right.svg') -24px/227px;
-        height: 284px;
-        width: 178px;
-        transform: rotate(353deg);
+        background: no-repeat url(./assets/cloud-right.svg) 5px/727px;
+        right: -715px;
+        top: -599px;
+        height: 1000px;
+        width: 1000px;
+        transform: rotate(359deg);
     }
+
+    //mobile
+    @media screen and (max-width: 767px) {
+        &__left {
+            background: no-repeat url(./assets/cloud-left.svg) -185px/368px;
+            top: -147px;
+            position: absolute;
+            height: 290px;
+            width: 194px;
+        }
+    
+        &__right {
+            position: absolute;
+            background: no-repeat url(./assets/cloud-right.svg) 5px/484px;
+            right: -279px;
+            top: -482px;
+            height: 810px;
+            width: 462px;
+            transform: rotate(352deg);
+        }
+    }
+    //tablet
+    @media screen and (min-width: 768px) and (max-width: 1240px) {
+        &__left {
+            background: no-repeat url(./assets/cloud-left.svg) -245px/506px;
+            top: -309px;
+            position: absolute;
+            height: 652px;
+            width: 554px;
+        }
+    
+        &__right {
+            position: absolute;
+            background: no-repeat url(./assets/cloud-right.svg) 5px/727px;
+            right: -712px;
+            top: -630px;
+            height: 1000px;
+            width: 1000px;
+            transform: rotate(352deg);
+        }
+    }
+    
 }

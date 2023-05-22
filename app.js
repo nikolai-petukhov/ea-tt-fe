@@ -14,3 +14,34 @@ setInterval(() => {
     minutes.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
     seconds.innerText = Math.floor((distance % (1000 * 60)) / 1000)
 }, 1000)
+
+
+
+const emailInput = document.getElementById('email')
+const validationMessage = document.getElementById('validationMessage')
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
+
+const validateEmail = (value) => EMAIL_REGEXP.test(value)
+
+const onEmailInput = () => {
+    if (!validateEmail(emailInput.value)) {
+        validationMessage.innerText = 'Please, enter a valid email'
+        validationMessage.style.color = 'red'
+    } else {
+        validationMessage.innerText = ''
+    }
+}
+emailInput.addEventListener('input', onEmailInput)
+
+
+const notificationForm = document.getElementById('notificationForm')
+
+const formSubmit = (e) => {
+    e.preventDefault()
+    if (validateEmail(emailInput.value)) {
+        emailInput.value = ''
+        console.log('sadsad');
+    }
+}
+
+notificationForm.addEventListener('submit', formSubmit)

@@ -22,7 +22,7 @@
                 <div class="main__content__text">We're making lots of improvements and will be back soon</div>
                 <div class="main__content__countdown">
                     <div class="main__content__countdown__container">
-                        <div id="days" class="main__content__countdown__container__number">92</div>
+                        <div id="days" class="main__content__countdown__container__number"></div>
                         <div class="main__content__countdown__container__wave">
                             <span class="main__content__countdown__container__wave__bigLbl">Days</span>
                             <span class="main__content__countdown__container__wave__smLbl">DD</span>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="main__content__countdown__devider">:</div>
                     <div class="main__content__countdown__container">
-                        <div id="hours" class="main__content__countdown__container__number">11</div>
+                        <div id="hours" class="main__content__countdown__container__number"></div>
                         <div class="main__content__countdown__container__wave">
                             <span class="main__content__countdown__container__wave__bigLbl">Hours</span>
                             <span class="main__content__countdown__container__wave__smLbl">HH</span>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="main__content__countdown__devider">:</div>
                     <div class="main__content__countdown__container">
-                        <div id="minutes" class="main__content__countdown__container__number">41</div>
+                        <div id="minutes" class="main__content__countdown__container__number"></div>
                         <div class="main__content__countdown__container__wave">
                             <span class="main__content__countdown__container__wave__bigLbl">Minutes</span>
                             <span class="main__content__countdown__container__wave__smLbl">MM</span>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="main__content__countdown__devider">:</div>
                     <div class="main__content__countdown__container">
-                        <div id="seconds" class="main__content__countdown__container__number">48</div>
+                        <div id="seconds" class="main__content__countdown__container__number"></div>
                         <div class="main__content__countdown__container__wave">
                             <span class="main__content__countdown__container__wave__bigLbl">Seconds</span>
                             <span class="main__content__countdown__container__wave__smLbl">SS</span>
@@ -63,7 +63,7 @@
             </section>
         </main>
         <footer class="footer centered">
-            <form action="" method="get">
+            <form id="notificationForm">
                 <div class="notification-form">
                     <input type="email" name="email" id="email" class="notification-form__input" placeholder="Enter your Email and get notified">
                     <button type="submit" class="notification-form__button centered">
@@ -71,6 +71,7 @@
                     </button>
                 </div>
             </form>
+            <p id="validationMessage"></p>
         </footer>
 
         <div class="modal-container centered">

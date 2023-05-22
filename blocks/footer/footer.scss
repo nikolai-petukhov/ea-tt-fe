@@ -5,6 +5,8 @@
         height: 192px;
         background: vars.$deep-blue;
         width: 100vw;
+        display: flex;
+        flex-direction: column;
     }
 
     .notification-form {

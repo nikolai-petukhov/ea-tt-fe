@@ -1,7 +1,10 @@
 @use '../../variables' as vars;
 
 .modal-container {
-    display: none !important;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
     position: absolute;
     height: 100vh;
     width: 100vw;

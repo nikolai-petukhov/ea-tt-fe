@@ -16,6 +16,17 @@ setInterval(() => {
 }, 1000)
 
 
+const showModalWindow = (heading, message) => {
+    const modalWindow = document.getElementById('modalWindow')
+    const modalHeading = document.getElementById('modalHeading')
+    const modalMessage = document.getElementById('modalMessage')
+
+
+    modalHeading.innerText = heading
+    modalMessage.innerText = message
+    modalWindow.style.display = 'flex'
+}
+
 
 const emailInput = document.getElementById('email')
 const validationMessage = document.getElementById('validationMessage')
@@ -36,11 +47,15 @@ emailInput.addEventListener('input', onEmailInput)
 
 const notificationForm = document.getElementById('notificationForm')
 
+const sendData = () => {
+    showModalWindow('SUCCESS!', 'You have successfully subscribed to the email newsletter')
+}
+
 const formSubmit = (e) => {
     e.preventDefault()
     if (validateEmail(emailInput.value)) {
         emailInput.value = ''
-        console.log('sadsad');
+        sendData()
     }
 }
 

@@ -57,7 +57,7 @@
                     &__wave {
                         height: 54px;
                         width: 132px;
-                        background: no-repeat url('../../assets/red-waveB.svg');
+                        background: no-repeat url('./assets/red-waveB.svg');
                         color: vars.$white;
                         font-weight: 400;
                         font-size: 16px;
@@ -184,7 +184,7 @@
 
                     &__wave {
                         height: 44px;
-                        background: no-repeat url('../../assets/red-wave.svg');
+                        background: no-repeat url('./assets/red-wave.svg');
                         background-position: 0px -3px;
                         color: vars.$white;
                         font-weight: 400;
@@ -312,7 +312,7 @@
 
                     &__wave {
                         height: 44px;
-                        background: no-repeat url('../../assets/red-wave.svg');
+                        background: no-repeat url('./assets/red-wave.svg');
                         background-position: 0px -3px;
                         color: vars.$white;
                         font-weight: 400;

@@ -125,7 +125,7 @@
     width: 100vw;
   }
   .header .logo {
-    background: no-repeat center/100% url("../../assets/logo.svg");
+    background: no-repeat center/100% url("./assets/logo.svg");
     height: 60px;
     width: 190px;
     margin-top: 60px;
@@ -136,7 +136,7 @@
     width: 100vw;
   }
   .header .logo {
-    background: no-repeat url("../../assets/logo.svg");
+    background: no-repeat url("./assets/logo.svg");
     height: 40px;
     width: 128px;
     margin-top: 80px;
@@ -147,7 +147,7 @@
     width: 100vw;
   }
   .header .logo {
-    background: no-repeat center/100% url("../../assets/logo.svg");
+    background: no-repeat center/100% url("./assets/logo.svg");
     height: 60px;
     width: 190px;
     margin-top: 100px;
@@ -204,7 +204,7 @@
   .main__content__countdown__container__wave {
     height: 54px;
     width: 132px;
-    background: no-repeat url("../../assets/red-waveB.svg");
+    background: no-repeat url("./assets/red-waveB.svg");
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
@@ -310,7 +310,7 @@
   }
   .main__content__countdown__container__wave {
     height: 44px;
-    background: no-repeat url("../../assets/red-wave.svg");
+    background: no-repeat url("./assets/red-wave.svg");
     background-position: 0px -3px;
     color: #FFFFFF;
     font-weight: 400;
@@ -417,7 +417,7 @@
   }
   .main__content__countdown__container__wave {
     height: 44px;
-    background: no-repeat url("../../assets/red-wave.svg");
+    background: no-repeat url("./assets/red-wave.svg");
     background-position: 0px -3px;
     color: #FFFFFF;
     font-weight: 400;
